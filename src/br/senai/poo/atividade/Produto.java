@@ -1,21 +1,21 @@
 package br.senai.poo.atividade;
 
 public abstract class Produto {
-    private Integer nome;
+    private String nome;
     private Integer codigo;
     private Double preco;
 
-    public Produto(Integer nome, Integer codigo, Double preco) {
+    public Produto(String nome, Integer codigo, Double preco) {
         this.nome = nome;
         setCodigo(codigo);
         setPreco(preco);
     }
 
-    public Integer getNome() {
+    public String getNome() {
         return nome;
     }
 
-    public void setNome(Integer nome) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
 

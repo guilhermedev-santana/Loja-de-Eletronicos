@@ -7,7 +7,7 @@ public class Eletronico extends Produto {
     private Integer id;
 
 
-    public Eletronico(Integer nome, Integer codigo, Double preco, CategoriaProdutoEnum categoria) {
+    public Eletronico(String nome, Integer codigo, Double preco, CategoriaProdutoEnum categoria) {
         super(nome, codigo, preco);
         this.categoria = categoria;
         id = proximoId++;
@@ -32,9 +32,9 @@ public class Eletronico extends Produto {
 
     public String exibirInformacoes(boolean detalhado) {
         if (detalhado) {
-            return "Eletrônico (" + getId() + ")" + "\nNome: " + getNome() + "\nCódigo: " + getCodigo() + "\nPreço: " + getPreco() + "\nCategoria: " + getCategoria();
-        } else {
-            return "Nome: " + getNome();
+            return exibirInformacoes();
+        }else {
+            return getNome();
         }
     }
 }
