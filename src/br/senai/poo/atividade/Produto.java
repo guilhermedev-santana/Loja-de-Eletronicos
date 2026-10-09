@@ -36,7 +36,7 @@ public abstract class Produto {
     }
 
     public void setPreco(Double preco) {
-        if (preco <= 0) {
+        if (codigo == null || preco <= 0) {
             throw new IllegalArgumentException("Erro, valor inválido!");
         } else {
             this.preco = preco;
