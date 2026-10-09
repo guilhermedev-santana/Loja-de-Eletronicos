@@ -13,11 +13,10 @@ public class Loja {
         for (Produto p : produtos) {
             if (p.getCodigo() == produto.getCodigo()) {
                 throw new IllegalArgumentException("Erro, Código Inválido!");
-            } else {
-                produtos.add(produto);
-                System.out.println("Produto Cadastrado com sucesso!");
             }
         }
+        produtos.add(produto);
+        System.out.println("Produto Cadastrado com sucesso!");
     }
 
     public ArrayList<Eletronico> listarProdutos() {
